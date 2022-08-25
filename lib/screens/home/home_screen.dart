@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:plant_app/constant.dart';
+import 'package:plant_app/screens/home/components/my_bottom_nav_bar.dart';
 import 'components/body.dart';
 //import 'package:plant_app/constant.dart';
 
@@ -12,17 +13,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(),
       body: Body(),
-      bottomNavigationBar: Container(height: 80, 
-      decoration: BoxDecoration(
-        boxShadow:[
-          BoxShadow(
-          offset: Offset(0, -10),
-          blurRadius:35,
-          color: kPrimaryColor.withOpacity(0.38),
-        ),
-        ],
-      ),
-      ),
+      bottomNavigationBar: MyBottomNavBar(),
     );
   }
 
@@ -38,3 +29,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
