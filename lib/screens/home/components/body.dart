@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter_svg/svg.dart';
-//import 'package:plant_app/constant.dart';
+import 'package:plant_app/constant.dart';
+import 'package:plant_app/screens/home/components/featured_plants.dart';
 import 'package:plant_app/screens/home/components/recomend_plants.dart';
 import 'package:plant_app/screens/home/components/title_with_more_bbtn.dart';
-
 import 'header_with_seachbox.dart';
 
 class Body extends StatelessWidget {
@@ -18,14 +18,39 @@ class Body extends StatelessWidget {
           HeaderWithSearchBox(size: size),
           TitleWithMoreBtn(
             title: "Recommended",
-            press: () {},
+            press: () {}
           ),
-          
           RecomendsPlants(),
           TitleWithMoreBtn(
             title: "Featured Plants",
-            press: () {},
+            press: () {}
           ),
+          FeaturedPlants(),
+          SizedBox(height: kDefualtPadding),
+        ],
+      ),
+    );
+  }
+}
+class FeaturedPlants extends StatelessWidget {
+  const FeaturedPlants({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children:<Widget> [
+          FeaturePlantCard(
+            image: "assets/images/bottom_img_1.png",
+            press: () {},
+            ),
+            FeaturePlantCard(
+            image: "assets/images/bottom_img_2.png",
+            press: () {},
+            ),
         ],
       ),
     );

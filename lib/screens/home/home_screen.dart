@@ -12,6 +12,17 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(),
       body: Body(),
+      bottomNavigationBar: Container(height: 80, 
+      decoration: BoxDecoration(
+        boxShadow:[
+          BoxShadow(
+          offset: Offset(0, -10),
+          blurRadius:35,
+          color: kPrimaryColor.withOpacity(0.38),
+        ),
+        ],
+      ),
+      ),
     );
   }
 
