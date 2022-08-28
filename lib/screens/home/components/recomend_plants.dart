@@ -33,12 +33,12 @@ class RecomendsPlants extends StatelessWidget {
             country: "Russia",
             price: 440,
             press: () {
-            //  Navigator.push(
-            //     context,
-            //     MaterialPageRoute(
-            //       builder: (context) => DetailsScreen(),
-            //     ),
-            //   ); 
+             Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(),
+                ),
+              ); 
             },
           ),
           RecomendPlantCard(
