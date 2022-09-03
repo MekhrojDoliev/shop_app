@@ -50,7 +50,11 @@ class Body extends StatelessWidget {
               Expanded(
                 child: TextButton(
                   onPressed: () {},
-                  child: Text("Description"),
+                  child: Text("Description",
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 3, 198, 81),
+                    fontSize: 16,
+                  ),),
                 ),
               ),
             ],
