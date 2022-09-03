@@ -4,8 +4,8 @@ import 'package:plant_app/constant.dart';
 class TitleWithMoreBtn extends StatelessWidget {
   const TitleWithMoreBtn({
     Key? key,
-     required this.title,
-      required this.press, //changed 10:17
+    required this.title,
+    required this.press, //changed 10:17
   }) : super(key: key);
   final String title;
   final Function press;
@@ -18,15 +18,28 @@ class TitleWithMoreBtn extends StatelessWidget {
         children: <Widget>[
           TitleWithCustomerUnderline(text: title),
           Spacer(),
-          FlatButton(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+          // FlatButton(
+          //   shape: RoundedRectangleBorder(
+          //     borderRadius: BorderRadius.circular(20),
+          //   ),
+          //   color: kPrimaryColor,
+          //   onPressed: this.press(),
+          //   child: Text(
+          //     "More",
+          //     style: TextStyle(color: Colors.white),
+          //   ),
+          // ),
+          TextButton(
+            style: TextButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              primary: Colors.green, // foreground
             ),
-            color: kPrimaryColor,
             onPressed: this.press(),
             child: Text(
-              "More",
-              style: TextStyle(color: Colors.white),
+              'More',
+              style: TextStyle(color: Color.fromARGB(255, 4, 76, 6)),
             ),
           ),
         ],

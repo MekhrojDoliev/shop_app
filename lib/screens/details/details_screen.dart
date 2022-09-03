@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:plant_app/screens/home/components/body.dart';
+import 'package:plant_app/screens/details/components/body.dart';
 
 class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Body(), 
+       body:  Body(),//Problem with button isnot working 20:54 
     );
   }
 }

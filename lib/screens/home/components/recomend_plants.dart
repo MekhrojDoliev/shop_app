@@ -19,26 +19,26 @@ class RecomendsPlants extends StatelessWidget {
             country: "Russia",
             price: 440,
             press: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) =>  DetailsScreen(),
-              //   ),
-              // );
-            }, 
-          ),
-          RecomendPlantCard(
-            image: "assets/images/image_2.png",
-            title: "Angelica",
-            country: "Russia",
-            price: 440,
-            press: () {
-             Navigator.push(
+              Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => DetailsScreen(),
                 ),
-              ); 
+              );
+            },
+          ),
+          RecomendPlantCard(
+            image: "assets/images/image_2.png",
+            title: "Angelica",
+            country: "USA",
+            price: 440,
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(),
+                ),
+              );
             },
           ),
           RecomendPlantCard(
@@ -66,7 +66,7 @@ class RecomendPlantCard extends StatelessWidget {
 
   final String image, title, country;
   final int price;
-  final Function press;
+  final VoidCallback press;
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +82,9 @@ class RecomendPlantCard extends StatelessWidget {
         children: <Widget>[
           Image.asset(image),
           GestureDetector(
-            onTap: press(),
+
+            onTap: press,
+            
             child: Container(
               padding: EdgeInsets.all(kDefualtPadding / 2),
               decoration: BoxDecoration(
